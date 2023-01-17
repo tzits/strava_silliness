@@ -29,12 +29,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Learn More
 
-###Strava
+### Strava
 
 You can Learn more about the Strava API by visiting [strava api](https://developers.strava.com/)
 Warning, it's a bit confusing and may be worth investigating some tutorials and walkthroughs on YouTube
 
-###React
+### React
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
