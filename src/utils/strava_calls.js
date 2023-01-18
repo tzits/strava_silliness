@@ -1,5 +1,6 @@
 export const fetchActvities = async() => {
     let distances = []
+    let accessToken = await getToken()
     const response = await fetch(
         `https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}`
     )
@@ -25,13 +26,16 @@ export const fetchActvities = async() => {
             )
         }
     }
-    console.log(distances)
     return distances
 
 }
 
+const getToken = async() => {
+    const response = await fetch(
+        `https://www.strava.com/oauth/token?client_id=${client_id}&client_secret=${client_secret}&refresh_token=${refreshToken}&grant_type=refresh_token`, {method: 'POST'}
+    )
+    const token = await (response.json())
+    return token.access_token
+}
+
 fetchActvities()
-
-// const refreshToken = async() => {
-
-// }
